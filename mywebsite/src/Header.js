@@ -14,7 +14,7 @@ class Header extends React.Component {
                         <nav class="navbar navbar-expand-md">
 
                             <a class="navbar-brand" href="#">
-                            <img src={require('./Images/logo.png')} /> 
+                            <img src={require('./Images/logo.png')} alt="logo" /> 
                             </a>
                                 <button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#main-navigation">
                                     <span class="navbar-toggler-icon"></span>
