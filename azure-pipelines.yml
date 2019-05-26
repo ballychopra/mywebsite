@@ -17,7 +17,7 @@ steps:
 
 - script: |
     npm install
-    
+    npm run build
   displayName: 'npm install and build' # npm run build
 - task: CopyFiles@1
   inputs:
