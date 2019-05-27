@@ -19,7 +19,12 @@ steps:
   inputs:
     versionSpec: '10.x'
   displayName: 'Install Node.js'
-
+- task: CmdLine@2
+  inputs:
+    script: 'mkdir $(projectFolder)'
+- task: CmdLine@2
+  inputs:
+    script: 'mkdir $(buildOutputFolder)'
 ##- script: |
 ##    npm install
 ##    npm run build
