@@ -17,6 +17,7 @@ steps:
 
 - script: |
     npm install
+    webpack
     npm run build
   displayName: 'npm install and build' # npm run build
 - task: CopyFiles@1
