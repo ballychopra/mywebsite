@@ -25,11 +25,7 @@ steps:
 - task: CmdLine@2
   inputs:
     script: 'mkdir $(buildOutputFolder)'
-- task: Npm@1
-  inputs:
-    command: 'custom'
-    workingDir: 'mywebsite'
-    customCommand: 'run build'
+
 ##- script: |
 ##    npm install
 ##    npm run build
@@ -37,6 +33,11 @@ steps:
 - script: |
     pushd $(projectFolder) && npm install && popd
 ##pushd $(projectFolder) && npm run build && popd
+- task: Npm@1
+  inputs:
+    command: 'custom'
+    workingDir: 'testwebsite/mywebsite'
+    customCommand: 'run build'
 - task: CopyFiles@1
   inputs:
 ##    SourceFolder: '$(build.sourcesdirectory)'
