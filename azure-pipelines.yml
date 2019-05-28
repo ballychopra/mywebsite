@@ -30,9 +30,13 @@ steps:
 ##    npm install
 ##    npm run build
   ##displayName: 'npm install and build' # npm run build
-- script: |
-    pushd $(projectFolder) && npm install && popd
+#- script: |
+#    pushd $(projectFolder) && npm install && popd
 ##pushd $(projectFolder) && npm run build && popd
+- task: Npm@1
+  inputs:
+    command: 'install'
+    workingDir: 'mywebsite'
 - task: Npm@1
   inputs:
     command: 'custom'
